@@ -10,9 +10,9 @@
   --dark-text-sec: #aaa;
 
   /* Light theme specific colors*/
-  --light-surface-0: #8c8c8c;
-  --light-surface-1: #c6c6c6;
-  --light-surface-2: #757171;
+  --light-surface-0: #c8c8c8;
+  --light-surface-1: #919191;
+  --light-surface-2: #626262;
   --light-surface-3: #bbb;
   --light-surface-4: #a49c9c;
   --light-text-main: #252525;
@@ -123,7 +123,7 @@ body {
 
     &:nth-child(1),
     &:nth-child(4) {
-      background-color: #FC6262;
+      background-color: #09bb86;
     }
   }
 
