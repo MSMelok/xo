@@ -144,19 +144,19 @@ body {
   }
 
   .circle:nth-child(5) {
-    animation-name: boxMoving4;
+    animation-name: boxMoving5;
   }
 
   .circle:nth-child(6) {
-    animation-name: boxMoving4;
+    animation-name: boxMoving6;
   }
 
   .circle:nth-child(7) {
-    animation-name: boxMoving4;
+    animation-name: boxMoving7;
   }
 
   .circle:nth-child(8) {
-    animation-name: boxMoving4;
+    animation-name: boxMoving8;
   }
 }
 
