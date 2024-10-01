@@ -363,35 +363,6 @@ resetBtn.addEventListener("click", (e) => {
   Game.reset()
 })
 
-// handle changes in players avater gallary element when user select a new avater from gallary
-addHandlers({
-  targets: [
-    player1.htmlElements.editor.avatersGallary,
-    player2.htmlElements.editor.avatersGallary
-  ],
-  events: ["click", "keypress"],
-  callbacks: [changeSelectedAvater]
-})
-
-// handle changes in palyer editor element when user select a new color
-addHandlers({
-  targets: [
-    player1.htmlElements.editor.colorOptions,
-    player2.htmlElements.editor.colorOptions],
-  events: ["click"],
-  callbacks: [changeSelectedColor]
-})
-
-// handle when user click on apply button in editor menu
-addHandlers({
-  targets: [
-    player1.htmlElements.editor.applyBtn,
-    player2.htmlElements.editor.applyBtn,
-  ],
-  events: ["click"],
-  callbacks: [updatePlayerInfo, updateLocalStorage]
-})
-
 // for playing sound effect when a popover opened.
 addHandlers({
   targets: document.querySelectorAll("[popover]"),
