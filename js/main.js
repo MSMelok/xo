@@ -586,30 +586,32 @@ function changeSelectedColor(event) {
  *
  * @param {Event} event - The event object triggered by the user interaction. Expected to have a `target` property that leads to a player element with the class `".player"`.
  */
-function updatePlayerInfo(event) {
-  const id = event.target.closest(".player").id; // => 'player1' | 'player2'
+ function updatePlayerInfo(event) {
+  const id = event.target.closest(".player").id; // 'player1' | 'player2'
   const targetPlayer = Game.players[id];
 
   if (targetPlayer) {
+    const nameInput = targetPlayer.htmlElements.editor.nameInput.value || id;
+    
+    // Get the checked color input
+    const colorInput = targetPlayer.htmlElements.editor.colorOptions.querySelector("input:checked");
+    const color = colorInput ? getComputedStyle(colorInput).getPropertyValue("--brand").trim() : "#000"; // Fallback to black if not found
+
+    // Extract the avatar file path from the src attribute
+    const avatarSrc = new URL(targetPlayer.htmlElements.editor.avatarPreview.src).pathname;
+    
+    // Set the new values to the player object
     const newValues = {
-      name: targetPlayer.htmlElements.editor.nameInput.value || id,
-      color: targetPlayer.htmlElements.editor.colorOptions.querySelector("[checked]").computedStyleMap().get("--brand")[0],
-      avaterSrc: new URL(targetPlayer.htmlElements.editor.avaterPreview.src).pathname,
-    }
+      name: nameInput,
+      color: color,
+      avatarSrc: avatarSrc,
+    };
 
-    // update player Name
-    targetPlayer.name = targetPlayer.htmlElements.name.textContent = newValues.name;
-
-    // update player avater image
-    targetPlayer.htmlElements.avater.src = newValues.avaterSrc;
-
-    // upadte player color 
-    targetPlayer.color = newValues.color;
-    document.body.style.setProperty({ player1: `--p1-brand`, player2: `--p2-brand` }[id], newValues.color);
-
+    // Update the player object with new values
+    Object.assign(targetPlayer, newValues);
   }
-  Game.playSound("click");
 }
+
 
 /**
  * Saves game data to Local Storage.
