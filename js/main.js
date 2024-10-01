@@ -86,7 +86,7 @@ const Game = {
     unmute: new Audio("./assets/audios/unmute.wav"),
     popupShow: new Audio("./assets/audios/popup.wav"),
     tap: new Audio("./assets/audios/tap.wav"),
-    win: new Audio("./assets/audios/win.wav"),
+    win: new Audio("./assets/audios/winning.wav"),
   },
   players: { player1, player2 },
 
