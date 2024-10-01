@@ -587,30 +587,67 @@ function changeSelectedColor(event) {
  * @param {Event} event - The event object triggered by the user interaction. Expected to have a `target` property that leads to a player element with the class `".player"`.
  */
  function updatePlayerInfo(event) {
-  const id = event.target.closest(".player").id; // 'player1' | 'player2'
-  const targetPlayer = Game.players[id];
-
-  if (targetPlayer) {
-    const nameInput = targetPlayer.htmlElements.editor.nameInput.value || id;
-    
-    // Get the checked color input
-    const colorInput = targetPlayer.htmlElements.editor.colorOptions.querySelector("input:checked");
-    const color = colorInput ? getComputedStyle(colorInput).getPropertyValue("--brand").trim() : "#000"; // Fallback to black if not found
-
-    // Extract the avatar file path from the src attribute
-    const avatarSrc = new URL(targetPlayer.htmlElements.editor.avatarPreview.src).pathname;
-    
-    // Set the new values to the player object
-    const newValues = {
-      name: nameInput,
-      color: color,
-      avatarSrc: avatarSrc,
-    };
-
-    // Update the player object with new values
-    Object.assign(targetPlayer, newValues);
+  const playerElement = event.target.closest(".player");
+  
+  if (!playerElement) {
+    console.error("No .player element found");
+    return;
   }
+  
+  const id = playerElement.id; // 'player1' | 'player2'
+  const targetPlayer = Game.players[id];
+  
+  if (!targetPlayer) {
+    console.error(`No player found for id: ${id}`);
+    return;
+  }
+  
+  // Get player name
+  const nameInput = targetPlayer.htmlElements.editor.nameInput ? targetPlayer.htmlElements.editor.nameInput.value || id : id;
+
+  // Debugging name input
+  console.log(`Player ID: ${id}, Name: ${nameInput}`);
+
+  // Get the checked color input
+  const colorInput = targetPlayer.htmlElements.editor.colorOptions.querySelector("input:checked");
+
+  if (!colorInput) {
+    console.error("No checked color input found");
+    return;
+  }
+
+  const color = getComputedStyle(colorInput).getPropertyValue("--brand").trim();
+  
+  // Debugging color selection
+  console.log(`Selected Color: ${color}`);
+
+  // Extract avatar file path
+  const avatarPreview = targetPlayer.htmlElements.editor.avatarPreview;
+
+  if (!avatarPreview) {
+    console.error("Avatar preview not found");
+    return;
+  }
+
+  const avatarSrc = new URL(avatarPreview.src).pathname;
+
+  // Debugging avatar source
+  console.log(`Avatar Src: ${avatarSrc}`);
+
+  // Set new values for the player
+  const newValues = {
+    name: nameInput,
+    color: color,
+    avatarSrc: avatarSrc,
+  };
+
+  // Apply the new values to the player
+  Object.assign(targetPlayer, newValues);
+
+  // Debugging final values
+  console.log(`Updated player info:`, newValues);
 }
+
 
 
 /**
