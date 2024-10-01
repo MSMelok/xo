@@ -464,10 +464,10 @@ function initializePageTheme() {
 
     if (storedThemeValue === "dark") {
       lightSwitch.switchTo("off"); // Switch to "off" if the theme is dark.
-      lightSwitch.setAttribute("aria-label", "Turn on lights")
+      lightSwitch.setAttribute("aria-label", "الوضع المضيء")
     } else {
       lightSwitch.switchTo("on") // Switch to "on" if the theme is light.
-      lightSwitch.setAttribute("aria-label", "Turn off lights")
+      lightSwitch.setAttribute("aria-label", "الوضع المظلم")
     }
   }
 }

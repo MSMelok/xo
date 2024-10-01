@@ -58,14 +58,23 @@ html {
 }
 
 @font-face {
-  font-family: 'SF Pro';
-  src: url('../webfonts/SF-Pro.ttf') format('truetype');
-  font-weight: bold;
+  font-family: 'SFPro';
+  src: url('./fonts/SF-Pro.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arabic Semi-Bold Font */
+@font-face {
+  font-family: 'SFProAR';
+  src: url('./fonts/SFProAR_semibold.ttf') format('truetype');
+  font-weight: 600; /* Semi-bold */
   font-style: normal;
 }
 
 body {
   background-color: var(--surface-0);
+  font-family: 'SFProAR', sans-serif;
   font-family: 'SF Pro', sans-serif;
   font-weight: 400;
   line-height: 1;
