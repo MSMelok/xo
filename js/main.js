@@ -9,7 +9,7 @@ const resetBtn = document.getElementById("resetBtn");
 const gameBox = document.querySelector(".gamebox");
 
 const player1 = {
-  // paleyr defaults info => same as html
+  // player defaults info => same as html
   name: "Player Red",
   mark: "X",
   color: "#FC6262",
@@ -41,7 +41,7 @@ const player1 = {
 };
 
 const player2 = {
-  // paleyr defaults info => same as html
+  // player defaults info => same as html
   name: "Player Blue",
   mark: "O",
   color: "#396AEB",
