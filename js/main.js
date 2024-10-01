@@ -10,7 +10,7 @@ const gameBox = document.querySelector(".gamebox");
 
 const player1 = {
   // paleyr defaults info => same as html
-  name: "Player 1",
+  name: "Player Red",
   mark: "X",
   color: "#FC6262",
   score: 0,
@@ -42,7 +42,7 @@ const player1 = {
 
 const player2 = {
   // paleyr defaults info => same as html
-  name: "Player 2",
+  name: "Player Blue",
   mark: "O",
   color: "#396AEB",
   score: 0,
