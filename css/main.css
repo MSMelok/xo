@@ -73,7 +73,7 @@ html {
 body {
   background-color: var(--surface-0);
   font-family: 'IBM Plex Sans Arabic', sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
   height: 100vh;
   color: var(--text-main);
