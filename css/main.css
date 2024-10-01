@@ -115,7 +115,7 @@ body {
     width: 40px;
     height: 40px;
     background-color: var(--p2-brand);
-    background-color: cornflowerblue;
+    background-color: rgb(13, 86, 221);
     border-radius: 50%;
     animation-duration: 2000ms;
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -123,7 +123,7 @@ body {
 
     &:nth-child(1),
     &:nth-child(4) {
-      background-color: #09bb86;
+      background-color: #059b6e;
     }
   }
 
@@ -140,6 +140,22 @@ body {
   }
 
   .circle:nth-child(4) {
+    animation-name: boxMoving4;
+  }
+
+  .circle:nth-child(5) {
+    animation-name: boxMoving4;
+  }
+
+  .circle:nth-child(6) {
+    animation-name: boxMoving4;
+  }
+
+  .circle:nth-child(7) {
+    animation-name: boxMoving4;
+  }
+
+  .circle:nth-child(8) {
     animation-name: boxMoving4;
   }
 }
