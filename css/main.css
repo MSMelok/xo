@@ -75,7 +75,7 @@ body {
   font-family: 'IBM Plex Sans Arabic', sans-serif;
   font-weight: 700;
   line-height: 1;
-  height: 100vh;
+  height: 95vh;
   color: var(--text-main);
   transition-property: background;
   transition-duration: var(--slow);
