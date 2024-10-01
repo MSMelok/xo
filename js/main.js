@@ -323,37 +323,37 @@ Promise.allSettled([p1, p2, p3]).then(v => {
 // --------------------------<<{ Event Handlers }>>--------------------------
 // --------------------------<<{                }>>--------------------------
 pauseSwitch.whenTurnOn = function (event) {
-  pauseSwitch.setAttribute("aria-label", "Pause");
+  pauseSwitch.setAttribute("aria-label", "إيقاف مؤقت");
   Game.enterFocusMode();
   Game.playSound("uiClick");
 }
 
 pauseSwitch.whenTurnOff = function (event) {
-  pauseSwitch.setAttribute("aria-label", "Start");
+  pauseSwitch.setAttribute("aria-label", "بدأ اللعبة");
   Game.leaveFocusMode();
   Game.playSound("uiClick");
 }
 
 lightSwitch.whenTurnOn = function (event) {
-  lightSwitch.setAttribute("aria-label", "Turn off lights"); // tip content;
+  lightSwitch.setAttribute("aria-label", "الوضع المظلم"); // tip content;
   changeThemeTo("light");
   Game.playSound("switch");
 }
 
 lightSwitch.whenTurnOff = function (event) {
-  lightSwitch.setAttribute("aria-label", "Turn on lights"); // tip content;
+  lightSwitch.setAttribute("aria-label", "الوضع المضيء"); // tip content;
   changeThemeTo("dark");
   Game.playSound("switch");
 }
 
 soundSwitch.whenTurnOn = function (event) {
-  soundSwitch.setAttribute("aria-label", "Mute"); // tip content;
+  soundSwitch.setAttribute("aria-label", "صامت"); // tip content;
   Game.muted = false;
   Game.playSound("unmute");
 }
 
 soundSwitch.whenTurnOff = function (event) {
-  soundSwitch.setAttribute("aria-label", "Unmute"); // tip content;
+  soundSwitch.setAttribute("aria-label", "تشغيل الصوت"); // tip content;
   Game.playSound("click");
   Game.muted = true;
 }
