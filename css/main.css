@@ -1,26 +1,26 @@
 /* Global Variables */
 :root {
   /* Dark theme specific colors*/
-  --dark-surface-0: #121212;
-  --dark-surface-1: #222;
-  --dark-surface-2: #333;
-  --dark-surface-3: #444;
-  --dark-surface-4: #555;
+  --dark-surface-0: #030a26;
+  --dark-surface-1: #1d1e51;
+  --dark-surface-2: #26264d;
+  --dark-surface-3: #2e2e46;
+  --dark-surface-4: #333340;
   --dark-text-main: #fff;
   --dark-text-sec: #aaa;
 
   /* Light theme specific colors*/
-  --light-surface-0: #f5f5f5;
-  --light-surface-1: #eee;
-  --light-surface-2: #ccc;
+  --light-surface-0: #8c8c8c;
+  --light-surface-1: #c6c6c6;
+  --light-surface-2: #757171;
   --light-surface-3: #bbb;
-  --light-surface-4: #888;
+  --light-surface-4: #a49c9c;
   --light-text-main: #252525;
   --light-text-sec: #444;
 
   /* General colors */
-  --p1-brand: #D01D1D;
-  --p2-brand: #0533AC;
+  --p1-brand: #D70D0D;
+  --p2-brand: #002179;
 
   /* animations durations */
   --fastest: 100ms;
