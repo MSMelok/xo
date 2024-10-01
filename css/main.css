@@ -544,8 +544,8 @@ header {
 
   .player__avater {
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 105px;
     z-index: -1;
     inset-inline-start: 20px;
     inset-block-end: 100%;
@@ -613,16 +613,16 @@ header {
 
   @media (min-width:768px) {
     .player__avater {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 135px;
     }
   }
 
   @media (min-width:1024px) {
 
     .player__avater {
-      width: 180px;
-      height: 180px;
+      width: 170px;
+      height: 165px;
     }
 
     .player__mark {
