@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
 /* Global Variables */
 :root {
   /* Dark theme specific colors*/
@@ -58,23 +60,19 @@ html {
 }
 
 @font-face {
-  font-family: 'SFPro';
+  font-family: 'SF Pro';
   src: url('./fonts/SF-Pro.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-/* Arabic Semi-Bold Font */
-@font-face {
-  font-family: 'SFProAR';
-  src: url('./fonts/SFProAR_semibold.ttf') format('truetype');
-  font-weight: 600; /* Semi-bold */
-  font-style: normal;
+:lang(ar) {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
 body {
   background-color: var(--surface-0);
-  font-family: 'SFProAR', sans-serif;
+  font-family: 'SF Pro', sans-serif;
   font-weight: 400;
   line-height: 1;
   height: 100vh;
@@ -212,7 +210,6 @@ header {
   height: 80px;
 
   #page-logo {
-    font-family: 'SF Pro', sans-serif;
     font-weight: 400;
     font-size: 45px;
   }
@@ -291,6 +288,7 @@ header {
 }
 
 #gameHelp {
+  direction: rtl;
   line-height: 1.5;
   width: clamp(200px, 90vw, 65ch);
   max-height: calc(100vh - 100px);
@@ -569,7 +567,6 @@ header {
   }
 
   .player__name {
-    font-family: 'SF Pro', sans-serif;
     font-size: 24px;
     color: var(--text-main);
   }
